@@ -1,36 +1,30 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Module architecture NextJs
+> Основной принцип модульной архитектуры frontend заключается в разделении функциональности приложения на независимые модули, которые могут быть разработаны, тестируемы и поддерживаемы отдельно друг от друга. Каждый модуль представляет собой логическую единицу, содержащую компоненты, стили, запросы к API и другую логику, связанную с конкретным функционалом приложения.
+Преимущества модульной архитектуры включают повышенную читаемость и поддерживаемость кода, упрощение масштабирования и рефакторинга, а также уменьшение вероятности возникновения конфликтов между различными частями приложения.
+Модульная архитектура также способствует повторному использованию кода, так как независимые модули могут быть легко внедрены в другие проекты или использованы повторно в различных частях приложения.
 
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Структура папок 
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+└── /src
+    ├── /app
+    ├── /page
+    |   |   ├── page.module.sass
+    |   |   ├── page.tsx
+    |   ├── favicon.ico
+    |   ├── button.module.sass
+    |   ├── layout.tsx
+    |   └── page.tsx
+    |     
+    ├── /components
+    |   ├── /Button
+    |   |   ├── button.module.sass
+    |   |   ├── Button.stories.js
+    |   |   └── Button.js
+    |   └── /...
+    |
+    ├── /hooks
+    |   ├── /query
+    |   |   └── query.hooks.ts
+    |   └── /...
+    └── /...
+```
